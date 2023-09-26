@@ -1,0 +1,14 @@
+const express= require("express");
+const { default: mongoose } = require("mongoose");
+const moongoose= require("mongoose");
+
+const pass= process.env.pass
+
+
+const connctionString= `mongodb+srv://abdulfatahabdol2003:${pass}@cluster0.m2krbgs.mongodb.net/?retryWrites=true&w=majority`
+const DB = async()=>{
+    await mongoose.connect(connctionString)
+    return console.log("DB is a Connected!!!");
+}
+
+module.exports = DB;
