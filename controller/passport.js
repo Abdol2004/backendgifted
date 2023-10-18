@@ -44,10 +44,6 @@ passport.deserializeUser((id, done) => {
 });
 
   
-  // User.findOrCreate({ googleId: profile.id }, function (err, user) {
-    //   return done(err, user);
-    // });
-
   var opts = {}
   opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
   opts.secretOrKey = process.env.secret_key;

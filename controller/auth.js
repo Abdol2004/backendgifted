@@ -31,7 +31,7 @@ try {
         });
         res.json({msg: 'New User Created Successfully'})
     }else{
-        res.json({msg: 'User Already Exist'})
+        res.json({error: 'User Already Exist', success:false})
     }
     
 } catch (error) {
