@@ -5,6 +5,10 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: false,
     },
+    username :{
+            type: String,
+            required: false,
+    },
     email : {
         type: String,
         required: false,
@@ -17,6 +21,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         enum:['monthly', 'weekly'],
         required: false,
+    },
+    role:{
+        type: String,
+        required: true,
+        enum:['admin', 'tutor', 'user']
     },
     googleId: {
         type: String,

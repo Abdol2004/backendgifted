@@ -25,6 +25,7 @@ try {
 
         const user = await User.create({
             fullname,
+            username,
             email,
             password: hashedPassword,
             earnType,
